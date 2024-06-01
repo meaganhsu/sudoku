@@ -52,8 +52,8 @@ public class Sudoku {
                     for (int n = 1; n < 10; n++) {
                         if (valid(x, y, n)) {
                             grid[x][y] = n;
-                            if (solve()) return true;       // recursion
-                            else grid[x][y] = 0;
+                            if (solve()) return true;
+                            else grid[x][y] = 0;          // backtrack
                         }
                     }
                     return false;
