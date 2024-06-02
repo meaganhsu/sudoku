@@ -130,6 +130,7 @@ public class GUI extends GraphicsProgram {
                 } else {
                     labels[x][y].setFont(new Font("Serif", Font.PLAIN, 30));
                     labels[x][y].setLabel(sudoku.getCell(x,y) + "");
+                    labels[x][y].setColor(Color.black);
                     add(labels[x][y],59+(80*y),75+(80*x));
                     textFields[x][y].setVisible(false);
                     labels[x][y].setVisible(true);
@@ -252,13 +253,13 @@ public class GUI extends GraphicsProgram {
 
         for (int x = 0; x < 9; x++) {
             for (int y = 0; y < 9; y++) {
-                textFields[x][y].setForeground(Color.black);
                 textFields[x][y].setFont(new Font("Serif", Font.PLAIN, 30));
                 textFields[x][y].setOpaque(false);
                 textFields[x][y].setDocument(new JTextFieldLimit());
                 textFields[x][y].setHorizontalAlignment(SwingConstants.CENTER);
                 textFields[x][y].setBorder(javax.swing.BorderFactory.createEmptyBorder());
                 textFields[x][y].setBounds(new Rectangle(10+(80*y),10+(80*x),79,79));
+                textFields[x][y].setForeground(Color.black);
 
                 add(textFields[x][y], 27+(80*y),27+(80*x));
 
